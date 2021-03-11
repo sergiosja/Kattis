@@ -1,19 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int a, b;
+    int a, b, c = 0;
     scanf("%d %d", &a, &b);
-    int c = 0;
 
     while (a != b) {
-        if (a > b && (a % 2 == 0)) {
-            a /= 2;
-            c++;
-        }
-        else {
-            a++;
-            c++;
-        }
+        a = (a > b && a % 2 == 0 ? a / 2 : a + 1);
+        c++;
     }
     printf("%d", c);
 }
