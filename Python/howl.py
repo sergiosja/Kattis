@@ -1,0 +1,1 @@
+print("AWAWHO" + len(input()) * "O")
