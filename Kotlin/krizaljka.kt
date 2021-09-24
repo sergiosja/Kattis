@@ -19,14 +19,10 @@ fun main() {
 }
 
 fun getCord(a: String, b: String): String {
-    var (x, y) = listOf(0, 0)
-
     for (i in 0..b.length-1) {
         for (j in 0..a.length-1) {
             if (b.get(i) == a.get(j)) {
-                x = i
-                y = j
-                return "$x $y"
+                return "$i $j"
             }
         }
     }
