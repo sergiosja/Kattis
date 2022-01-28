@@ -6,4 +6,4 @@ I have used the site to improve my problem solving skills, better my understandi
 
 For 2022 I have set out to learn (at least the basics of) Go, in addition to improving my Kotlin skills. Therefore, most of this year's solutions will be in these two languages😄
 
-At the time of writing this, I have 550.3 points and sit in 6th place in my [university](https://open.kattis.com/universities/uio.no), whilst maintaining healthy competition with my friend [Jakob](https://github.com/jakobkhansen).
+At the time of writing this, I have 555.3 points and sit in 6th place in my [university](https://open.kattis.com/universities/uio.no), whilst maintaining healthy competition with my friend [Jakob](https://github.com/jakobkhansen).
