@@ -6,7 +6,7 @@ func main() {
 	var n int
 	fmt.Scanln(&n)
 
-	// The first first 3 are trivial and 4 is given in the problem desc.
+	// The first 3 are trivial and 4 is given in the sample input.
 	a := [25]int{0, 1, 2, 4, 7}
 
 	for i := 5; i <= n; i++ {
