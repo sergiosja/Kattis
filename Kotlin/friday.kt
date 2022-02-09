@@ -1,5 +1,3 @@
-import java.util.Collections
-
 fun main() {
     val tc = readLine()!!.toInt()
 
@@ -10,28 +8,21 @@ fun main() {
         val (_, totMonths) = readLine()!!.split(" ").map(String::toInt)
         val daysInYear = readLine()!!.split(" ").map(String::toInt)
 
-        var currMonth = 0
         var currentWeekday = 0
-        while (currMonth < totMonths) {
+        for (currMonth in 0..totMonths-1) {
             var daysInThisMonth = 1
 
-            while (daysInThisMonth <= daysInYear[currMonth]) {
-                for (day in currentWeekday..days.size-1) {
+            outer@ while (true) {
+                for (day in (currentWeekday % 7)..days.size-1) {
                     days[day].add(daysInThisMonth++)
-
-                    if (++currentWeekday > 6) {
-                        currentWeekday = 0
-                    }
-
+                    currentWeekday++
                     if (daysInThisMonth > daysInYear[currMonth]) {
-                        break
+                        break@outer
                     }
                 }
             }
-
-            currMonth++
         }
 
-        println(Collections.frequency(days[5], 13))
+        println(days[5].count{ it == 13 })
     }
 }
