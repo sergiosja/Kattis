@@ -6,7 +6,7 @@ fun main() {
         books.add(readLine()!!.toInt())
 
     books
-        .sortedByDescending{ it }
+        .sortedByDescending { it }
         .filterIndexed { index, _ -> (index + 1) % 3 != 0 }
         .sum()
         .also{ println(it) }
