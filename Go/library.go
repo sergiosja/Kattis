@@ -2,10 +2,56 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
+
+/* Reverses an int array */
+func reverseIntArray(a []int64) []int64 {
+	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+		a[i], a[j] = a[j], a[i]
+	}
+	return a
+}
+
+/* Reverses a float array */
+func reverseFloatArray(a []float64) []float64 {
+	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+		a[i], a[j] = a[j], a[i]
+	}
+	return a
+}
+
+/* Reverses a string array */
+func reverseStringArray(a []string) []string {
+	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+		a[i], a[j] = a[j], a[i]
+	}
+	return a
+}
+
+/* Finds median amongst a variadic number of ints */
+func medianInts(n int64, nums ...int64) int64 {
+	var a = make([]int64, n)
+	for i, v := range nums {
+		a[i] = v
+	}
+	sort.Slice(a, func(i, j int) bool { return a[i] < a[j] })
+	return a[len(a)/2]
+}
+
+/* Finds median amongst a variadic number of floats */
+func medianFloats(n int64, nums ...float64) float64 {
+	var a = make([]float64, n)
+	for i, v := range nums {
+		a[i] = v
+	}
+	sort.Slice(a, func(i, j int) bool { return a[i] < a[j] })
+	return a[len(a)/2]
+}
 
 /* Gets sum of elements in int64 array */
 func sumInts(a []int64) int64 {
@@ -67,4 +113,9 @@ func readStringArray(limit int) []string {
 	}
 
 	return stringArray
+}
+
+/* yeah... */
+func thisIsOnlyHereSoThatICanImportTheFmtPackage() {
+	fmt.Println("This is only here so that I can import the fmt package for testing etc.")
 }
